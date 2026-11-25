@@ -7,7 +7,7 @@
 | 파일 | 내용 |
 |---|---|
 | `compare_shop.py` | 매점 조회 도구, 모델–도구 호출 루프, 정답 평가 및 Reflexion 재시도 |
-| `requirements.txt`, `.env.example` | Python 의존성과 수업용 API 키 설정 예시 |
+| `requirements.txt`, `.env.example` | Python 의존성과 MonoRouter API 키 설정 예시 |
 | [logs/notion-run.txt](logs/notion-run.txt) | 팀 Notion에 기록된 실제 실행 출력 |
 | [verification/verify_offline.py](verification/verify_offline.py) | 실제 API 키 없이 도구 호출과 재시도 분기를 확인하는 스크립트 |
 
@@ -22,7 +22,7 @@ python -m pip install -r requirements.txt
 cp .env.example .env
 ```
 
-`.env`의 `MONOROUTER_API_KEY` 값을 본인에게 발급된 MonoRouter API 키로 바꾼 뒤 실행합니다. 실습은 MonoRouter의 수업용 엔드포인트를 통해 `gpt-5.6-terra`를 호출합니다. 키는 로컬 `.env`에만 보관합니다.
+`.env`의 `MONOROUTER_API_KEY` 값을 본인에게 발급된 MonoRouter API 키로 바꾼 뒤 실행합니다. 실습은 MonoRouter의 Universal API를 통해 `gpt-5.6-terra`를 호출하므로 해당 모델을 사용할 수 있는 키가 필요합니다. 키는 로컬 `.env`에만 보관합니다. [MonoRouter API 키 발급 안내](https://monogpt.kr/support/kr/articles/monorouter-api-key)
 
 ```bash
 python compare_shop.py
